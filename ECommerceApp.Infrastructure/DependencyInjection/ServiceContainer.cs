@@ -1,7 +1,10 @@
 ﻿using ECommerceApp.Domain.Entities;
 using ECommerceApp.Domain.Interfaces;
 using ECommerceApp.Infrastructure.Data;
+using ECommerceApp.Infrastructure.Middleware;
 using ECommerceApp.Infrastructure.Repositories;
+using EntityFramework.Exceptions.PostgreSQL;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -16,7 +19,7 @@ public static class ServiceContainer
         string connectionString = configuration.GetConnectionString("DefaultConnection")!;
         
         services.AddDbContext<AppDbContext>(option =>
-            option.UseNpgsql(configuration.GetConnectionString(connectionString)),
+            option.UseNpgsql(connectionString).UseExceptionProcessor(),
             ServiceLifetime.Scoped
         );
         
@@ -24,5 +27,11 @@ public static class ServiceContainer
         services.AddScoped<IGeneric<Category>, GenericRepository<Category>>();
         
         return services;
+    }
+
+    public static IApplicationBuilder UseInfrastructureServices(this IApplicationBuilder app)
+    {
+        app.UseMiddleware<ExceptionHandlingMiddleware>();
+        return app;
     }
 }

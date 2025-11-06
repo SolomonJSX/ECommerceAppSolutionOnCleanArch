@@ -1,5 +1,4 @@
-﻿using ECommerceApp.Application.Exceptions;
-using ECommerceApp.Domain.Interfaces;
+﻿using ECommerceApp.Domain.Interfaces;
 using ECommerceApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,8 +13,8 @@ public class GenericRepository<TEntity>(AppDbContext context) : IGeneric<TEntity
 
     public async Task<TEntity> GetByIdAsync(Guid id)
     {
-        var result = await context.Set<TEntity>().FindAsync(id) ?? throw new ItemNotFoundException($"Item with ID: {id} not found");
-        return result;
+        var result = await context.Set<TEntity>().FindAsync(id);
+        return result!;
     }
 
     public async Task<int> AddAsync(TEntity entity)
@@ -32,7 +31,9 @@ public class GenericRepository<TEntity>(AppDbContext context) : IGeneric<TEntity
 
     public async Task<int> DeleteAsync(Guid id)
     {
-        var entity = await context.Set<TEntity>().FindAsync(id) ?? throw new ItemNotFoundException($"Item with ID: {id} not found");
+        var entity = await context.Set<TEntity>().FindAsync(id);
+
+        if (entity is null) return 0;
         
         context.Set<TEntity>().Remove(entity);
         return await context.SaveChangesAsync();

@@ -1,6 +1,34 @@
+using ECommerceApp.Application.DependencyInjection;
+using ECommerceApp.Infrastructure.DependencyInjection;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+
+builder.Services.AddOpenApi();
+
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddApplicationServices();
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseInfrastructureServices();
+
+app.UseHttpsRedirection();
+
+
+app.UseAuthorization();
+app.MapControllers();
 
 app.Run();
