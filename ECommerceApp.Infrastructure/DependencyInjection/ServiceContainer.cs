@@ -1,8 +1,10 @@
-﻿using ECommerceApp.Domain.Entities;
+﻿using ECommerceApp.Application.Services.Interfaces.Logging;
+using ECommerceApp.Domain.Entities;
 using ECommerceApp.Domain.Interfaces;
 using ECommerceApp.Infrastructure.Data;
 using ECommerceApp.Infrastructure.Middleware;
 using ECommerceApp.Infrastructure.Repositories;
+using ECommerceApp.Infrastructure.Services;
 using EntityFramework.Exceptions.PostgreSQL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -25,6 +27,7 @@ public static class ServiceContainer
         
         services.AddScoped<IGeneric<Product>, GenericRepository<Product>>();
         services.AddScoped<IGeneric<Category>, GenericRepository<Category>>();
+        services.AddScoped(typeof(IAppLogger<>), typeof(SerilogLoggerAdapter<>));
         
         return services;
     }

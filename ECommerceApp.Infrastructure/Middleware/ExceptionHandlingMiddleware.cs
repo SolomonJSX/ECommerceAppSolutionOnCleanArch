@@ -1,22 +1,26 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ECommerceApp.Application.Services.Interfaces.Logging;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
 
 namespace ECommerceApp.Infrastructure.Middleware;
 
-public class ExceptionHandlingMiddleware(RequestDelegate _next)
+public class ExceptionHandlingMiddleware(RequestDelegate next)
 {
     public async Task InvokeAsync(HttpContext context)
     {
         try
         {
-            await _next(context);
+            await next(context);
         }
         catch (DbUpdateException ex)
         {
+            var logger = context.RequestServices.GetRequiredService<IAppLogger<ExceptionHandlingMiddleware>>();
             context.Response.ContentType = "application/json";
             if (ex.InnerException is PostgresException pgEx)
             {
+                logger.LogError(pgEx, "Sql Exception");
                 switch (pgEx.SqlState)
                 {
                     case "23505": // unique_violation
@@ -42,12 +46,15 @@ public class ExceptionHandlingMiddleware(RequestDelegate _next)
             }
             else
             {
+                logger.LogError(ex, "Related EFCore Exception");
                 context.Response.StatusCode = StatusCodes.Status500InternalServerError;
                 await context.Response.WriteAsync("An error occurred while saving the entity changes.");
             }
         }
         catch (Exception ex)
         {
+            var logger = context.RequestServices.GetRequiredService<IAppLogger<ExceptionHandlingMiddleware>>();
+            logger.LogError(ex, "Unknown exception.");
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = StatusCodes.Status500InternalServerError;
             await context.Response.WriteAsync("An error occured: " + ex.Message);
