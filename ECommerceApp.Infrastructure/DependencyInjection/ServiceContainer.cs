@@ -3,9 +3,11 @@ using ECommerceApp.Application.Services.Interfaces.Logging;
 using ECommerceApp.Domain.Entities;
 using ECommerceApp.Domain.Entities.Identity;
 using ECommerceApp.Domain.Interfaces;
+using ECommerceApp.Domain.Interfaces.Authentication;
 using ECommerceApp.Infrastructure.Data;
 using ECommerceApp.Infrastructure.Middleware;
 using ECommerceApp.Infrastructure.Repositories;
+using ECommerceApp.Infrastructure.Repositories.Authentication;
 using ECommerceApp.Infrastructure.Services;
 using EntityFramework.Exceptions.PostgreSQL;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -68,6 +70,10 @@ public static class ServiceContainer
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"]!))
                 };
             });
+
+        services.AddScoped<IRoleManagement, RoleManagement>();
+        services.AddScoped<IUserManagement, UserManagement>();
+        services.AddScoped<ITokenManagement, TokenManagement>();
         
         return services;
     }
