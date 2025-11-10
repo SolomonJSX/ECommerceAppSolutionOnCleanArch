@@ -10,7 +10,7 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("log/log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-builder.Host.UseSerilog();
+//builder.Host.UseSerilog();
 Log.Logger.Information("Application is building.......");
 
 builder.Services.AddControllers();
@@ -29,7 +29,7 @@ builder.Services.AddCors(options =>
     {
         policyBuilder.AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowAnyOrigin()
+            .WithOrigins("https://localhost:")
             .AllowCredentials();
     });
 });

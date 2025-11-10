@@ -1,0 +1,379 @@
+2025-11-10 21:43:25.245 +05:00 [INF] Application is building.......
+2025-11-10 21:43:25.628 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:43:25.754 +05:00 [INF] Application is running.......
+2025-11-10 21:43:25.771 +05:00 [INF] Creating key {9d1b6031-b09a-418f-806d-4d750d2601d1} with creation date 2025-11-10 16:43:25Z, activation date 2025-11-10 16:43:25Z, and expiration date 2026-02-08 16:43:25Z.
+2025-11-10 21:43:25.790 +05:00 [INF] Writing data to file 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys\key-9d1b6031-b09a-418f-806d-4d750d2601d1.xml'.
+2025-11-10 21:43:25.865 +05:00 [FTL] Application startup exception
+System.InvalidOperationException: The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the CORS policy by listing individual origins if credentials needs to be supported.
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder.Build()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions.AddPolicy(String name, Action`1 configurePolicy)
+   at Program.<>c.<<Main>$>b__0_0(CorsOptions options) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsService..ctor(IOptions`1 options, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2025-11-10 21:43:25.903 +05:00 [ERR] Hosting failed to start
+System.InvalidOperationException: The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the CORS policy by listing individual origins if credentials needs to be supported.
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder.Build()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions.AddPolicy(String name, Action`1 configurePolicy)
+   at Program.<>c.<<Main>$>b__0_0(CorsOptions options) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsService..ctor(IOptions`1 options, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-11-10 21:43:25.919 +05:00 [ERR] Application failed to start.......
+System.InvalidOperationException: The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the CORS policy by listing individual origins if credentials needs to be supported.
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder.Build()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions.AddPolicy(String name, Action`1 configurePolicy)
+   at Program.<>c.<<Main>$>b__0_0(CorsOptions options) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 28
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsService..ctor(IOptions`1 options, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 56
+2025-11-10 21:44:59.419 +05:00 [INF] Application is building.......
+2025-11-10 21:44:59.646 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:44:59.734 +05:00 [INF] Application is running.......
+2025-11-10 21:44:59.850 +05:00 [INF] Now listening on: https://localhost:7216
+2025-11-10 21:44:59.853 +05:00 [INF] Now listening on: http://localhost:5229
+2025-11-10 21:44:59.856 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 21:44:59.857 +05:00 [INF] Hosting environment: Development
+2025-11-10 21:44:59.858 +05:00 [INF] Content root path: C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host
+2025-11-10 21:45:00.319 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/ - null null
+2025-11-10 21:45:00.367 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at ECommerceApp.Infrastructure.DependencyInjection.ServiceContainer.<>c__DisplayClass0_0.<AddInfrastructureServices>b__3(JwtBearerOptions options) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Infrastructure\DependencyInjection\ServiceContainer.cs:line 60
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-10 21:45:00.419 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/ - 500 null text/html; charset=utf-8 101.395ms
+2025-11-10 21:45:00.564 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/favicon.ico - null null
+2025-11-10 21:45:00.571 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null. (Parameter 's')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Text.Encoding.GetBytes(String s)
+   at ECommerceApp.Infrastructure.DependencyInjection.ServiceContainer.<>c__DisplayClass0_0.<AddInfrastructureServices>b__3(JwtBearerOptions options) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Infrastructure\DependencyInjection\ServiceContainer.cs:line 60
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+--- End of stack trace from previous location ---
+   at System.Lazy`1.CreateValue()
+   at Microsoft.Extensions.Options.OptionsCache`1.GetOrAdd[TArg](String name, Func`3 createOptions, TArg factoryArgument)
+   at Microsoft.Extensions.Options.OptionsMonitor`1.Get(String name)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.InitializeAsync(AuthenticationScheme scheme, HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandlerProvider.GetHandlerAsync(HttpContext context, String authenticationScheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.AuthenticateAsync(HttpContext context, String scheme)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-10 21:45:00.579 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/favicon.ico - 500 null text/plain; charset=utf-8 15.0722ms
+2025-11-10 21:45:59.355 +05:00 [INF] Application is shutting down...
+2025-11-10 21:48:13.548 +05:00 [INF] Application is building.......
+2025-11-10 21:48:13.765 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:48:13.853 +05:00 [INF] Application is running.......
+2025-11-10 21:48:13.958 +05:00 [INF] Now listening on: https://localhost:7216
+2025-11-10 21:48:13.961 +05:00 [INF] Now listening on: http://localhost:5229
+2025-11-10 21:48:13.963 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 21:48:13.965 +05:00 [INF] Hosting environment: Development
+2025-11-10 21:48:13.966 +05:00 [INF] Content root path: C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host
+2025-11-10 21:48:14.303 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/ - null null
+2025-11-10 21:48:14.381 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/ - 404 0 null 78.7156ms
+2025-11-10 21:48:14.397 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7216/, Response status code: 404
+2025-11-10 21:48:18.356 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger - null null
+2025-11-10 21:48:18.366 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger - 301 0 null 10.1059ms
+2025-11-10 21:48:18.369 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.html - null null
+2025-11-10 21:48:18.447 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.html - 200 null text/html;charset=utf-8 77.4294ms
+2025-11-10 21:48:18.470 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/swagger-ui-bundle.js - null null
+2025-11-10 21:48:18.470 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.css - null null
+2025-11-10 21:48:18.470 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/swagger-ui.css - null null
+2025-11-10 21:48:18.470 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-10 21:48:18.470 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/index.js - null null
+2025-11-10 21:48:18.490 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.css - 200 152 text/css 20.2253ms
+2025-11-10 21:48:18.493 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/index.js - 200 null application/javascript;charset=utf-8 22.8642ms
+2025-11-10 21:48:18.509 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/swagger-ui-standalone-preset.js - 200 77352 text/javascript 39.169ms
+2025-11-10 21:48:18.509 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/swagger-ui-bundle.js - 200 424767 text/javascript 39.4826ms
+2025-11-10 21:48:18.509 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/swagger-ui.css - 200 23647 text/css 39.5397ms
+2025-11-10 21:48:18.672 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - null null
+2025-11-10 21:48:18.712 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/swagger/favicon-32x32.png - null null
+2025-11-10 21:48:18.718 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/favicon-32x32.png - 200 628 image/png 5.9451ms
+2025-11-10 21:48:18.799 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 126.9137ms
+2025-11-10 21:48:43.195 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 102
+2025-11-10 21:48:43.202 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:48:43.204 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:48:43.206 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:48:43.225 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:48:43.232 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 1.6295ms
+2025-11-10 21:48:43.235 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:48:43.237 +05:00 [ERR] Unknown exception.
+System.InvalidOperationException: Unable to resolve service for type 'ECommerceApp.Application.Services.Interfaces.Authentication.IAuthenticationService' while attempting to activate 'ECommerceApp.Host.Controllers.AuthenticationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method10(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at ECommerceApp.Infrastructure.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Infrastructure\Middleware\ExceptionHandlingMiddleware.cs:line 15
+2025-11-10 21:48:43.255 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 500 null application/json 60.6029ms
+2025-11-10 21:49:18.078 +05:00 [INF] Application is shutting down...
+2025-11-10 21:49:47.070 +05:00 [INF] Application is building.......
+2025-11-10 21:49:47.311 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:49:47.397 +05:00 [INF] Application is running.......
+2025-11-10 21:49:47.510 +05:00 [INF] Now listening on: https://localhost:7216
+2025-11-10 21:49:47.513 +05:00 [INF] Now listening on: http://localhost:5229
+2025-11-10 21:49:47.516 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 21:49:47.517 +05:00 [INF] Hosting environment: Development
+2025-11-10 21:49:47.518 +05:00 [INF] Content root path: C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host
+2025-11-10 21:49:47.810 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/ - null null
+2025-11-10 21:49:47.890 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/ - 404 0 null 81.7822ms
+2025-11-10 21:49:47.909 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7216/, Response status code: 404
+2025-11-10 21:49:52.054 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 102
+2025-11-10 21:49:52.067 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:49:52.069 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:49:52.072 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:49:52.087 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:49:52.352 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-10 21:49:52.407 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 21:49:52.439 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 345.8829ms
+2025-11-10 21:49:52.442 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:49:52.445 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 400 null application/problem+json; charset=utf-8 390.6494ms
+2025-11-10 21:51:07.870 +05:00 [INF] Application is shutting down...
+2025-11-10 21:51:19.798 +05:00 [INF] Application is building.......
+2025-11-10 21:51:20.441 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:51:20.567 +05:00 [INF] Application is running.......
+2025-11-10 21:51:20.853 +05:00 [INF] Now listening on: https://localhost:7216
+2025-11-10 21:51:20.856 +05:00 [INF] Now listening on: http://localhost:5229
+2025-11-10 21:51:20.860 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 21:51:20.862 +05:00 [INF] Hosting environment: Development
+2025-11-10 21:51:20.864 +05:00 [INF] Content root path: C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host
+2025-11-10 21:51:20.975 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/ - null null
+2025-11-10 21:51:20.975 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 102
+2025-11-10 21:51:21.167 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:51:21.169 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:51:21.215 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/ - 404 0 null 242.5819ms
+2025-11-10 21:51:21.216 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:21.236 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7216/, Response status code: 404
+2025-11-10 21:51:21.262 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:51:21.671 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-10 21:51:21.754 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 21:51:21.800 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 530.1591ms
+2025-11-10 21:51:21.803 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:21.808 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 400 null application/problem+json; charset=utf-8 835.834ms
+2025-11-10 21:51:23.371 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 102
+2025-11-10 21:51:23.378 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:51:23.380 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:51:23.382 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:23.384 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:51:23.399 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 21:51:23.402 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 14.6332ms
+2025-11-10 21:51:23.404 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:23.406 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 400 null application/problem+json; charset=utf-8 34.3109ms
+2025-11-10 21:51:29.531 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 102
+2025-11-10 21:51:29.536 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:51:29.537 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:51:29.539 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:29.541 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:51:29.551 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 21:51:29.553 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 9.0456ms
+2025-11-10 21:51:29.555 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:29.557 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 400 null application/problem+json; charset=utf-8 25.895ms
+2025-11-10 21:51:49.493 +05:00 [INF] Application is building.......
+2025-11-10 21:51:50.105 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:51:50.244 +05:00 [INF] Application is running.......
+2025-11-10 21:51:50.444 +05:00 [INF] Now listening on: https://localhost:7216
+2025-11-10 21:51:50.446 +05:00 [INF] Now listening on: http://localhost:5229
+2025-11-10 21:51:50.449 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 21:51:50.450 +05:00 [INF] Hosting environment: Development
+2025-11-10 21:51:50.451 +05:00 [INF] Content root path: C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host
+2025-11-10 21:51:50.988 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/ - null null
+2025-11-10 21:51:51.140 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/ - 404 0 null 153.6424ms
+2025-11-10 21:51:51.157 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7216/, Response status code: 404
+2025-11-10 21:51:54.158 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 102
+2025-11-10 21:51:54.262 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:51:54.264 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:51:54.268 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:54.287 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:51:54.608 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-10 21:51:54.682 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 21:51:54.719 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 425.136ms
+2025-11-10 21:51:54.721 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:51:54.725 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 400 null application/problem+json; charset=utf-8 567.7224ms
+2025-11-10 21:52:20.452 +05:00 [INF] Application is building.......
+2025-11-10 21:52:20.667 +05:00 [INF] User profile is available. Using 'C:\Users\Janserik\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-10 21:52:20.767 +05:00 [INF] Application is running.......
+2025-11-10 21:52:20.883 +05:00 [INF] Now listening on: https://localhost:7216
+2025-11-10 21:52:20.885 +05:00 [INF] Now listening on: http://localhost:5229
+2025-11-10 21:52:20.887 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 21:52:20.889 +05:00 [INF] Hosting environment: Development
+2025-11-10 21:52:20.890 +05:00 [INF] Content root path: C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host
+2025-11-10 21:52:21.183 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7216/ - null null
+2025-11-10 21:52:21.252 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7216/ - 404 0 null 71.4986ms
+2025-11-10 21:52:21.269 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7216/, Response status code: 404
+2025-11-10 21:52:52.333 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7216/api/Authentication/create - application/json 114
+2025-11-10 21:52:52.344 +05:00 [INF] CORS policy execution failed.
+2025-11-10 21:52:52.345 +05:00 [INF] Request origin https://localhost:7216 does not have permission to access the resource.
+2025-11-10 21:52:52.348 +05:00 [INF] Executing endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:52:52.364 +05:00 [INF] Route matched with {action = "CreateUser", controller = "Authentication", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(ECommerceApp.Application.DTOs.Identity.CreateUser) on controller ECommerceApp.Host.Controllers.AuthenticationController (ECommerceApp.Host).
+2025-11-10 21:52:52.608 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software AutoMapper. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-10 21:52:52.664 +05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-10 21:52:52.693 +05:00 [INF] Executed action ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host) in 323.0272ms
+2025-11-10 21:52:52.695 +05:00 [INF] Executed endpoint 'ECommerceApp.Host.Controllers.AuthenticationController.CreateUser (ECommerceApp.Host)'
+2025-11-10 21:52:52.699 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7216/api/Authentication/create - 400 null application/problem+json; charset=utf-8 365.9095ms
+2025-11-10 21:53:36.325 +05:00 [INF] Application is shutting down...
+2025-11-10 21:54:02.164 +05:00 [INF] Application is building.......
+2025-11-10 21:54:02.261 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 21:54:30.673 +05:00 [INF] Application is building.......
+2025-11-10 21:54:30.772 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 21:55:13.193 +05:00 [INF] Application is building.......
+2025-11-10 21:55:13.302 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 21:59:33.708 +05:00 [INF] Application is building.......
+2025-11-10 21:59:33.768 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 21:59:48.344 +05:00 [INF] Application is building.......
+2025-11-10 21:59:48.399 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 22:00:27.666 +05:00 [INF] Application is building.......
+2025-11-10 22:00:27.757 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 22:04:26.146 +05:00 [INF] Application is building.......
+2025-11-10 22:04:26.252 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 22:04:37.861 +05:00 [INF] Application is building.......
+2025-11-10 22:04:37.964 +05:00 [ERR] Application failed to start.......
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in C:\Users\Janserik\RiderProjects\ECommerceAppSolution\ECommerceApp.Host\Program.cs:line 39
+2025-11-10 22:05:57.342 +05:00 [INF] Application is building.......
+2025-11-10 22:05:57.643 +05:00 [INF] Application is running.......
