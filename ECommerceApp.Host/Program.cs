@@ -34,6 +34,7 @@ builder.Services.AddCors(options =>
     });
 });
 
+
 try
 {
     var app = builder.Build();
@@ -53,6 +54,7 @@ try
     app.UseAuthorization();
     app.MapControllers();
     Log.Logger.Information("Application is running.......");
+    Console.WriteLine("JWT KEY: " + builder.Configuration["Jwt:Key"]);
     app.Run();
 }
 catch (Exception ex)

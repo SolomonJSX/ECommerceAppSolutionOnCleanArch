@@ -1,4 +1,5 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -21,7 +22,8 @@ public class TokenManagement(AppDbContext dbContext, IConfiguration config) : IT
         using RandomNumberGenerator rng = RandomNumberGenerator.Create();
         rng.GetBytes(buffer);
         
-        return Convert.ToBase64String(buffer);
+        string token = Convert.ToBase64String(buffer);
+        return WebUtility.UrlEncode(token);
     }
 
     public List<Claim> GetUserClaimsFromToken(string token)

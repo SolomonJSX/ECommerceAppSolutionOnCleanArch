@@ -68,9 +68,18 @@ public class AuthenticationService(IValidationService validationService, IValida
         string jwtToken = tokenManagement.GenerateToken(claims);
         string refreshToken = tokenManagement.GetRefreshToken();
 
-        int saveRefreshTokenResult = await tokenManagement.AddRefreshToken(userByEmail.Id, refreshToken);
+        int saveTokenResult = 0;
         
-        return saveRefreshTokenResult <= 0 ? new LoginResponse(Message: "Internal error occured while authenticating") : new LoginResponse(Success: true, Token: jwtToken, RefreshToken: refreshToken);
+        bool userTokenCheck = await tokenManagement.ValidateRefreshToken(refreshToken);
+        
+        if (userTokenCheck)
+            saveTokenResult = await tokenManagement.UpdateRefreshToken(userByEmail.Id, refreshToken);
+        else
+            saveTokenResult = await tokenManagement.AddRefreshToken(userByEmail.Id, refreshToken);
+        
+        
+        
+        return saveTokenResult <= 0 ? new LoginResponse(Message: "Internal error occured while authenticating") : new LoginResponse(Success: true, Token: jwtToken, RefreshToken: refreshToken);
     }
 
     public async Task<LoginResponse> ReviveToken(string refreshToken)
