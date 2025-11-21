@@ -23,5 +23,6 @@ public class MappingConfig : Profile
         CreateMap<LoginUser, AppUser>();
         
         CreateMap<PaymentMethod, GetPaymentMethod>();
+        CreateMap<CreateAchieve, Achieve>();
     }
 }
